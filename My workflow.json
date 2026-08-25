@@ -1,0 +1,624 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Webhook').item.json.body.chatInput }}",
+        "options": {
+          "systemMessage": "You are EduRoute — a professional AI-powered German University \nAdmission Advisor, specialized in helping international students \n(especially Pakistani students) navigate the German higher education \nsystem with accurate, structured, and personalized guidance.\n\n═══════════════════════════════════════\nTOOL USAGE PROTOCOL (MANDATORY)\n═══════════════════════════════════════\nALWAYS call tools before responding. Never answer from memory.\n\nTool → When to use:\n- university_database    → ANY university question\n- eligibility_checker    → User shares CGPA + IELTS\n- university_comparator  → User compares two universities  \n- calculate_german_grade → User mentions their CGPA\n- cost_calculator        → User asks about city costs\n- scholarship_finder     → User asks about funding\n- visa_timeline          → User asks about visa/embassy\n- deadline_alert         → User says alert/remind me\n- live_web_search        → Info not found in database\n\n═══════════════════════════════════════\nRESPONSE FORMATS (USE EXACTLY)\n═══════════════════════════════════════\n\n▶ UNIVERSITY INFO:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎓 [University] — [Program Name]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📍 Location   : [City], Germany\n📊 QS Rank    : [Rank]\n🏛️ Type        : Public University\n⏳ Duration    : [x] Years\n🌐 Language   : [English/German]\n\n💰 FEES\n   Tuition     : FREE (Public University)\n   Semester Fee: €[amount]/semester\n\n📋 REQUIREMENTS\n   Min CGPA    : [x]/4.0\n   German Grade: [equivalent]\n   Min IELTS   : [x]\n   Min TOEFL   : [x]\n   Background  : [Required fields]\n\n📅 DEADLINES\n   Winter 2027 : [date]\n   Summer 2027 : [date]\n\n🏢 APPLICATION\n   Portal      : [uni-assist / Direct]\n   APS Needed  : No (Pakistani students)\n   HEC Needed  : Yes ✅\n\n🏆 DIFFICULTY  : [Easy/Medium/Hard/Very Hard]\n🎯 SCHOLARSHIP : [Available scholarships]\n\n💡 PRO TIP: [One specific actionable tip]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💬 Want to compare with another university? Just ask!\n\n▶ ELIGIBILITY REPORT:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n✅ ELIGIBILITY REPORT — EduRoute\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n👤 Profile Summary:\n   CGPA        : [x]/4.0\n   German Grade: [x]\n   IELTS       : [x]\n   Background  : [x]\n\n🟢 SAFE SCHOOLS (Apply Confidently):\n   1. [University] ............. [x]% match\n   2. [University] ............. [x]% match\n   3. [University] ............. [x]% match\n\n🟡 TARGET SCHOOLS (Strong SOP needed):\n   1. [University] ............. [x]% match\n   2. [University] ............. [x]% match\n\n🔴 REACH SCHOOLS (Ambitious):\n   1. [University] ............. [x]% match\n\n📊 STATS: [x] universities eligible out of 60\n💡 STRATEGY: [Personalized application strategy]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n▶ COMPARISON:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n⚖️ UNIVERSITY COMPARISON — EduRoute\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n                    [UNI 1]      [UNI 2]\n📊 QS Rank          [x]          [x]\n💰 Tuition          FREE         FREE\n💳 Semester Fee     €[x]         €[x]\n📋 Min CGPA         [x]          [x]\n🌍 Min IELTS        [x]          [x]\n📅 Deadline         [date]       [date]\n🏢 Apply Via        [x]          [x]\n🎯 Difficulty       [x]          [x]\n🏙️ City             [x]          [x]\n💵 Living Cost      €[x]/mo      €[x]/mo\n\n🏆 VERDICT: [Clear recommendation with reasoning]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n▶ COST OF LIVING:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💰 MONTHLY COSTS — [City]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🏠 Rent           : €[x]\n🍕 Food           : €[x]\n🚌 Transport      : €[x]\n🏥 Health Insurance: €[x]\n📦 Miscellaneous  : €[x]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💵 Total/Month    : €[x]\n📅 Total/Year     : €[x]\n🏦 Blocked Account: €11,208 (required for visa)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n▶ GRADE CONVERSION:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📊 CGPA CONVERSION — EduRoute\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🇵🇰 Your CGPA     : [x]/4.0\n🇩🇪 German Grade  : [x]/5.0\n📈 Category       : [Excellent/Good/Satisfactory]\n✅ Eligibility    : [Summary]\n💡 What it means  : [Practical advice]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n▶ SCHOLARSHIP:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🎓 SCHOLARSHIPS — EduRoute\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n[For each scholarship:]\n[Number]. [Name]\n    💰 Amount    : [x]\n    📅 Deadline  : [date]\n    ✅ Eligible  : [criteria]\n    🔗 Apply     : [link]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n▶ VISA TIMELINE:\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📅 VISA TIMELINE — [Intake]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n[Month] → [Action required]\n...\n📋 Required Documents:\n✅ [Document]\n...\n⚠️ Pakistani Students:\n- [Specific advice]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n═══════════════════════════════════════\nGLOBAL RULES\n═══════════════════════════════════════\n✅ Always use tools first — never answer from memory\n✅ Always mention tuition is FREE at public universities  \n✅ Always mention HEC attestation required for Pakistanis\n✅ Always mention APS is NOT required for Pakistanis\n✅ Always mention blocked account (€11,208) for visa\n✅ Keep responses structured and scannable\n✅ End every response with relevant follow-up suggestion\n✅ If user asks about deadline → remind about HEC timing\n✅ Flag Winter 2027 deadlines specifically\n✅ Be warm, professional, and encouraging"
+        }
+      },
+      "id": "fc4a723c-ab68-4b93-86d0-805023f1ecbc",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        144,
+        -288
+      ]
+    },
+    {
+      "parameters": {
+        "description": "Convert student CGPA to German grade using \nModified Bavarian Formula. Use when user \nmentions their CGPA or asks what their \nGerman grade equivalent is.\nInput: cgpa (number out of 4.0 scale)",
+        "jsCode": "const query = $input.first()?.json?.query || \n              $json?.cgpa || \n              $json?.query || \"\";\n\nconst match = query.toString().match(/[\\d.]+/);\nconst cgpa = match ? parseFloat(match[0]) : 0;\n\nif (!cgpa || cgpa > 4.0 || cgpa < 0) {\n  return \"Error: Please provide valid CGPA between 0 and 4.0\";\n}\n\nconst maxCgpa = 4.0;\nconst minPass = 2.0;\nconst grade = 1 + 3 * ((maxCgpa - cgpa) / (maxCgpa - minPass));\nconst rounded = Math.round(grade * 10) / 10;\n\nlet category = \"\";\nif (rounded <= 1.5) category = \"Excellent (Sehr Gut)\";\nelse if (rounded <= 2.5) category = \"Good (Gut)\";\nelse if (rounded <= 3.5) category = \"Satisfactory (Befriedigend)\";\nelse category = \"Sufficient (Ausreichend)\";\n\nreturn `CGPA ${cgpa}/4.0 = German grade ${rounded} (${category})`;",
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"cgpa\": {\n      \"type\": \"number\",\n      \"description\": \"Student CGPA on 4.0 scale e.g. 3.22\"\n    }\n  },\n  \"required\": [\"cgpa\"]\n}"
+      },
+      "id": "ea3cba23-f226-42cb-83bb-6348dc20207c",
+      "name": "calculate_german_grade",
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        560,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "description": "Get monthly cost of living for German cities \nfor international students including rent, food, \ntransport and insurance breakdown.\nUse when user asks about living costs, expenses, \nbudget, or city cost comparison.\nInput: city name (e.g. munich, berlin, dortmund)",
+        "jsCode": "// Example: convert the \n// ── cost_calculator (n8n Code Tool node) ──────────────────────────────\n// Input: city (string) — passed by the AI Agent via $fromAI('city')\n// Output: plain object (NOT wrapped in [{ json: {...} }])\n\nlet cityInput = $fromAI('city');\n\n// Defensive handling: if n8n/the model passes an object instead of a\n// plain string (happens when the Tool's input schema isn't strictly\n// defined as \"string\"), try to pull a usable string out of it instead\n// of crashing on .toLowerCase().\nif (typeof cityInput === 'object' && cityInput !== null) {\n  cityInput = cityInput.city || cityInput.value || cityInput.input || JSON.stringify(cityInput);\n}\n\nconst city = String(cityInput || '').toLowerCase().trim();\n\nconst cities = {\n  \"munich\": { rent: 950, food: 280, transport: 57, insurance: 110, misc: 120, total: 1517 },\n  \"berlin\": { rent: 750, food: 250, transport: 86, insurance: 110, misc: 100, total: 1296 },\n  \"hamburg\": { rent: 800, food: 260, transport: 107, insurance: 110, misc: 110, total: 1387 },\n  \"frankfurt\": { rent: 850, food: 270, transport: 90, insurance: 110, misc: 110, total: 1430 },\n  \"dortmund\": { rent: 480, food: 220, transport: 98, insurance: 110, misc: 80, total: 988 },\n  \"dusseldorf\": { rent: 700, food: 250, transport: 98, insurance: 110, misc: 100, total: 1258 },\n  \"stuttgart\": { rent: 780, food: 260, transport: 78, insurance: 110, misc: 100, total: 1328 },\n  \"karlsruhe\": { rent: 650, food: 240, transport: 72, insurance: 110, misc: 90, total: 1162 },\n  \"saarbrucken\": { rent: 450, food: 210, transport: 70, insurance: 110, misc: 75, total: 915 },\n  \"deggendorf\": { rent: 400, food: 200, transport: 60, insurance: 110, misc: 70, total: 840 },\n  \"ingolstadt\": { rent: 650, food: 230, transport: 65, insurance: 110, misc: 85, total: 1140 },\n  \"magdeburg\": { rent: 380, food: 200, transport: 60, insurance: 110, misc: 70, total: 820 },\n  \"chemnitz\": { rent: 350, food: 190, transport: 55, insurance: 110, misc: 65, total: 770 },\n  \"passau\": { rent: 500, food: 210, transport: 60, insurance: 110, misc: 75, total: 955 },\n  \"cologne\": { rent: 700, food: 250, transport: 98, insurance: 110, misc: 100, total: 1258 },\n  \"bonn\": { rent: 650, food: 240, transport: 90, insurance: 110, misc: 90, total: 1180 },\n  \"heidelberg\": { rent: 750, food: 250, transport: 80, insurance: 110, misc: 100, total: 1290 }\n};\n\n// Normalize German umlaut variants to their ASCII-safe keys above\nconst umlautMap = {\n  \"düsseldorf\": \"dusseldorf\",\n  \"saarbrücken\": \"saarbrucken\",\n  \"köln\": \"cologne\"\n};\nconst normalizedCity = umlautMap[city] || city;\n\nconst data = cities[normalizedCity];\n\nif (!data) {\n  return {\n    error: \"City not found: \" + city,\n    available_cities: Object.keys(cities).join(\", \")\n  };\n}\n\nreturn {\n  city: normalizedCity,\n  monthly_breakdown: {\n    rent: \"EUR \" + data.rent,\n    food: \"EUR \" + data.food,\n    transport: \"EUR \" + data.transport,\n    insurance: \"EUR \" + data.insurance,\n    miscellaneous: \"EUR \" + data.misc\n  },\n  total_monthly: \"EUR \" + data.total,\n  total_yearly: \"EUR \" + (data.total * 12),\n  blocked_account_needed: \"EUR 11208\"\n};",
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"city\": {\n      \"type\": \"string\",\n      \"description\": \"German city name, e.g. munich, berlin, dortmund\"\n    }\n  },\n  \"required\": [\"city\"]\n}"
+      },
+      "id": "651be9a2-c570-4d50-8284-4832c4d88b03",
+      "name": "cost_calculator",
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        752,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "q": "={{ $fromAI('query') }}",
+        "additionalFields": {
+          "uds": ""
+        },
+        "requestOptions": {}
+      },
+      "id": "fe73b042-e099-489c-9618-ba71c12fb0ba",
+      "name": "live_web_search",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        368,
+        176
+      ],
+      "credentials": {
+        "serpApi": {
+          "id": "eqiZ9bq2lOJleNqc",
+          "name": "SerpApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Search the German university database to find \nadmission requirements, deadlines, tuition fees, \nIELTS scores, CGPA requirements and rankings.\nALWAYS use this tool when user asks about any \nGerman university, program, admission, CGPA \neligibility, or deadline information.\nReturn ALL rows so AI can filter the best matches.",
+        "documentId": {
+          "__rl": true,
+          "value": "1dkqitvA1FbRmzh9r47IdiutgFNBITwxklF_SCLJv9Ck",
+          "mode": "list",
+          "cachedResultName": "University_Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dkqitvA1FbRmzh9r47IdiutgFNBITwxklF_SCLJv9Ck/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 877065066,
+          "mode": "list",
+          "cachedResultName": "Universities",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dkqitvA1FbRmzh9r47IdiutgFNBITwxklF_SCLJv9Ck/edit#gid=877065066"
+        },
+        "filtersUI": {
+          "values": []
+        },
+        "combineFilters": "OR",
+        "options": {
+          "outputFormatting": {
+            "values": {
+              "general": "FORMATTED_VALUE",
+              "date": "FORMATTED_STRING"
+            }
+          }
+        }
+      },
+      "id": "2b27ff31-7143-464e-a65d-7827a9ffc941",
+      "name": "university_database",
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        240,
+        224
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vXw0AxLJXJ18fQ4K",
+          "name": "Google Sheets account"
+        }
+      },
+      "notes": "Search German university database for admission \nrequirements, deadlines, fees, CGPA, IELTS scores.\nReturns all 60 universities for AI to filter."
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-flash-lite-latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -192,
+        80
+      ],
+      "id": "fafbb886-fc40-4105-84f9-d6826a1d7878",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "yYm8DwbmnypOmIJh",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "description": "Find scholarships available for international \nstudents applying to German universities.\nUse when user asks about scholarships, funding,\nfinancial aid, or money for studies in Germany.\nInput: nationality or any scholarship query",
+        "jsCode": "const query = $input.first()?.json?.query || \"\";\n\nconst scholarships = [\n  {\n    name: \"DAAD Scholarship\",\n    amount: \"€861/month + travel allowance\",\n    deadline: \"October 15, 2026\",\n    eligibility: \"Bachelor degree, good academic record, under 32 years\",\n    link: \"daad.de/en/study-and-research-in-germany/scholarships\",\n    for: \"All nationalities including Pakistan\"\n  },\n  {\n    name: \"Deutschlandstipendium\",\n    amount: \"€300/month\",\n    deadline: \"Varies by university (usually April-June)\",\n    eligibility: \"Enrolled at German university, good grades\",\n    link: \"deutschlandstipendium.de\",\n    for: \"All students enrolled in Germany\"\n  },\n  {\n    name: \"HEC Overseas Scholarship\",\n    amount: \"Full funding (tuition + living + travel)\",\n    deadline: \"Check hec.gov.pk\",\n    eligibility: \"Pakistani nationals, 16 years education, under 35\",\n    link: \"hec.gov.pk/overseas-scholarships\",\n    for: \"Pakistani students only\"\n  },\n  {\n    name: \"Erasmus Mundus\",\n    amount: \"€1,000-1,400/month\",\n    deadline: \"January 2027 (for Winter 2027)\",\n    eligibility: \"Bachelor degree, English proficiency\",\n    link: \"erasmus-mundus.eu\",\n    for: \"All nationalities\"\n  },\n  {\n    name: \"Heinrich Böll Foundation\",\n    amount: \"€850/month + study allowance\",\n    deadline: \"March 1, 2027\",\n    eligibility: \"Political/social engagement, good grades\",\n    link: \"boell.de/en/foundation/scholarships\",\n    for: \"All nationalities\"\n  },\n  {\n    name: \"Konrad Adenauer Foundation\",\n    amount: \"€850/month\",\n    deadline: \"January 15, 2027\",\n    eligibility: \"Above average grades, leadership qualities\",\n    link: \"kas.de/en/scholarships\",\n    for: \"All nationalities\"\n  },\n  {\n    name: \"Friedrich Ebert Foundation\",\n    amount: \"€850/month\",\n    deadline: \"April 30, 2027\",\n    eligibility: \"Social/political commitment, good grades\",\n    link: \"fes.de/en/scholarships\",\n    for: \"All nationalities\"\n  }\n];\n\nlet result = \"🎓 Scholarships for International Students in Germany\\n\\n\";\n\nscholarships.forEach((s, i) => {\n  result += `${i+1}. ${s.name}\\n`;\n  result += `   💰 Amount: ${s.amount}\\n`;\n  result += `   📅 Deadline: ${s.deadline}\\n`;\n  result += `   ✅ Eligibility: ${s.eligibility}\\n`;\n  result += `   🌍 For: ${s.for}\\n`;\n  result += `   🔗 ${s.link}\\n\\n`;\n});\n\nresult += \"💡 Tip: Apply for DAAD and HEC simultaneously for best chances.\\n\";\nresult += \"⚠️ Pakistani students: HEC Overseas is fully funded — apply first!\";\n\nreturn result;"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        960,
+        208
+      ],
+      "id": "4b216937-ab46-4150-a613-2ce5b7962eef",
+      "name": "scholarship_finder"
+    },
+    {
+      "parameters": {
+        "description": "Provide German student visa application timeline\nand required documents for international students.\nUse when user asks about visa, when to apply,\nembassy, documents needed for Germany.\nInput: intake semester (winter/summer) or year",
+        "jsCode": "const query = $input.first()?.json?.query || \"\";\nconst isWinter = !query.toLowerCase().includes(\"summer\");\nconst intake = isWinter ? \"Winter 2027 (October 2027)\" : \"Summer 2027 (April 2027)\";\n\nlet result = `📅 German Student Visa Timeline\\n`;\nresult += `Intake: ${intake}\\n\\n`;\n\nif (isWinter) {\n  result += `📌 Step-by-Step Timeline:\\n\\n`;\n  result += `Jan 2027 → Give IELTS exam\\n`;\n  result += `Feb 2027 → Start university applications\\n`;\n  result += `Mar 2027 → Get IELTS results\\n`;\n  result += `Apr-May 2027 → Submit applications (most deadlines)\\n`;\n  result += `Jun 2027 → Receive admission letters\\n`;\n  result += `Jun 2027 → Get HEC attestation done\\n`;\n  result += `Jul 2027 → Open blocked account (€11,208)\\n`;\n  result += `Jul 2027 → Book German embassy appointment (BOOK EARLY!)\\n`;\n  result += `Aug 2027 → Submit visa application\\n`;\n  result += `Aug-Sep 2027 → Visa processing (6-10 weeks)\\n`;\n  result += `Oct 2027 → ✈️ Fly to Germany\\n\\n`;\n} else {\n  result += `📌 Step-by-Step Timeline:\\n\\n`;\n  result += `Sep 2026 → Give IELTS exam\\n`;\n  result += `Oct 2026 → Start university applications\\n`;\n  result += `Nov 2026 → Get IELTS results\\n`;\n  result += `Nov-Dec 2026 → Submit applications\\n`;\n  result += `Jan 2027 → Receive admission letters\\n`;\n  result += `Jan 2027 → Get HEC attestation done\\n`;\n  result += `Feb 2027 → Open blocked account\\n`;\n  result += `Feb 2027 → Book embassy appointment\\n`;\n  result += `Mar 2027 → Submit visa application\\n`;\n  result += `Mar-Apr 2027 → Visa processing\\n`;\n  result += `Apr 2027 → ✈️ Fly to Germany\\n\\n`;\n}\n\nresult += `📋 Required Documents:\\n`;\nresult += `✅ Valid passport (min 1 year validity)\\n`;\nresult += `✅ Admission letter from German university\\n`;\nresult += `✅ Blocked account proof (€11,208)\\n`;\nresult += `✅ HEC attested degree & transcripts\\n`;\nresult += `✅ IELTS/TOEFL certificate\\n`;\nresult += `✅ Health insurance proof\\n`;\nresult += `✅ Biometric photos\\n`;\nresult += `✅ Visa application form\\n`;\nresult += `✅ Motivation letter\\n\\n`;\n\nresult += `⚠️ Pakistani Students - Important:\\n`;\nresult += `• Book embassy appointment 2-3 months early (slots fill fast)\\n`;\nresult += `• German Embassy Islamabad: islamabad.diplo.de\\n`;\nresult += `• German Consulate Karachi: karachi.diplo.de\\n`;\nresult += `• Processing time: 6-10 weeks\\n`;\nresult += `• APS certificate NOT required for Pakistanis\\n`;\nresult += `• HEC attestation IS required\\n`;\n\nreturn result;"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        1152,
+        192
+      ],
+      "id": "eee182ca-962e-47e5-a9ac-c48b884253d3",
+      "name": "visa_timeline"
+    },
+    {
+      "parameters": {
+        "description": "Compare two German universities side by side.\nUse when user asks to compare universities,\nmentions two university names together, or\nasks which university is better.\nInput: two university names to compare",
+        "jsCode": "const query = $input.first()?.json?.query || \"\";\n\n// This tool signals the agent to fetch both universities\n// from Google Sheets and compare them\nconst instruction = `\nTo compare universities, follow these steps:\n1. Use university_database tool to fetch data for university 1\n2. Use university_database tool to fetch data for university 2  \n3. Compare these fields side by side:\n   - QS Ranking\n   - Min CGPA required\n   - Min IELTS required\n   - Winter 2027 Deadline\n   - Semester Fee\n   - Difficulty Tier\n   - Apply Via (direct or uni-assist)\n   - City and cost of living\n4. Give a recommendation based on the student profile\n\nQuery received: ${query}\nPlease fetch both universities from the database now and compare them.\n`;\n\nreturn instruction;"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        1520,
+        160
+      ],
+      "id": "bd41fb7f-9051-47c2-b35e-2b15ca18b05b",
+      "name": "university_comparator"
+    },
+    {
+      "parameters": {
+        "description": "Check which German universities a student is \neligible for based on CGPA, IELTS score and \nacademic background. Returns ranked list with\nmatch percentage. Use when student provides\ntheir academic profile or asks where they can apply.\nInput: cgpa, ielts score, background",
+        "jsCode": "const query = $input.first()?.json?.query || \"\";\n\n// Extract CGPA\nconst cgpaMatch = query.match(/cgpa[:\\s]+?([\\d.]+)|gpa[:\\s]+?([\\d.]+)|([\\d.]+)\\s*(?:cgpa|gpa)/i);\nconst cgpa = cgpaMatch ? parseFloat(cgpaMatch[1] || cgpaMatch[2] || cgpaMatch[3]) : null;\n\n// Extract IELTS\nconst ieltsMatch = query.match(/ielts[:\\s]+?([\\d.]+)|([\\d.]+)\\s*ielts/i);\nconst ielts = ieltsMatch ? parseFloat(ieltsMatch[1] || ieltsMatch[2]) : null;\n\nif (!cgpa) {\n  return \"Please provide your CGPA. Example: 'I have CGPA 3.22 and IELTS 6.5, CS background'\";\n}\n\nlet result = `✅ Eligibility Analysis\\n`;\nresult += `Your Profile: CGPA ${cgpa}/4.0`;\nif (ielts) result += ` | IELTS ${ielts}`;\nresult += `\\n\\n`;\n\n// German grade conversion\nconst grade = 1 + 3 * ((4.0 - cgpa) / (4.0 - 2.0));\nconst germanGrade = Math.round(grade * 10) / 10;\nresult += `📊 Your German Grade: ${germanGrade}\\n\\n`;\n\n// Tier recommendations based on CGPA\nif (cgpa >= 3.5) {\n  result += `🟢 SAFE Schools (Apply Confidently):\\n`;\n  result += `• All Easy Tier universities (Deggendorf, THI, Kempten)\\n`;\n  result += `• All Medium Tier universities (TU Dortmund, HHU, Passau)\\n\\n`;\n  result += `🟡 TARGET Schools:\\n`;\n  result += `• Hard Tier (Saarland, TU Darmstadt, FAU Erlangen)\\n\\n`;\n  result += `🔴 REACH Schools:\\n`;\n  result += `• TUM, LMU Munich, Tübingen, KIT\\n`;\n} else if (cgpa >= 3.0) {\n  result += `🟢 SAFE Schools (Apply Confidently):\\n`;\n  result += `• Easy Tier: Deggendorf, THI Ingolstadt, Kempten, HNU\\n\\n`;\n  result += `🟡 TARGET Schools:\\n`;\n  result += `• Medium Tier: TU Dortmund, HHU Düsseldorf, Paderborn, Passau\\n\\n`;\n  result += `🔴 REACH Schools:\\n`;\n  result += `• Hard Tier: Saarland, TU Darmstadt, RWTH Aachen\\n`;\n} else if (cgpa >= 2.5) {\n  result += `🟢 SAFE Schools:\\n`;\n  result += `• Easy Tier only: Deggendorf, THI, Kempten, HNU, Furtwangen\\n\\n`;\n  result += `🟡 TARGET Schools:\\n`;\n  result += `• Lower Medium: TU Dortmund, Magdeburg, Chemnitz, Rostock\\n\\n`;\n  result += `🔴 REACH Schools:\\n`;\n  result += `• Upper Medium: HHU, Paderborn, Passau\\n`;\n} else {\n  result += `⚠️ Your CGPA may be below minimum requirements for most programs.\\n`;\n  result += `🟢 Try: Deggendorf (min 2.3), THI Ingolstadt (min 2.3)\\n`;\n  result += `💡 Consider: Preparatory courses (Studienkolleg) first\\n`;\n}\n\nresult += `\\n📋 IELTS Recommendation:\\n`;\nif (!ielts) {\n  result += `• You haven't mentioned IELTS score\\n`;\n  result += `• Most unis require 6.5 minimum\\n`;\n  result += `• TUM/Tübingen require 7.0+\\n`;\n} else if (ielts >= 7.0) {\n  result += `• Your IELTS ${ielts} opens ALL universities ✅\\n`;\n} else if (ielts >= 6.5) {\n  result += `• Your IELTS ${ielts} meets most requirements ✅\\n`;\n  result += `• Blocked from: TUM, LMU, Tübingen (need 7.0)\\n`;\n} else {\n  result += `• Your IELTS ${ielts} is below most requirements ⚠️\\n`;\n  result += `• Minimum needed: 6.5 for most programs\\n`;\n  result += `• Retake recommended before applying\\n`;\n}\n\nresult += `\\n💡 Next Steps:\\n`;\nresult += `• Use /compare to compare your top choices\\n`;\nresult += `• Use /alert to set deadline reminders\\n`;\nresult += `• Use /scholarship to find funding options\\n`;\n\nreturn query"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.3,
+      "position": [
+        1344,
+        176
+      ],
+      "id": "e1ef33d1-9dae-4a13-8c58-7b8c5a823a7a",
+      "name": "eligibility_checker"
+    },
+    {
+      "parameters": {
+        "jsCode": "const message = $json.chatInput || $json.output || \"\";\nconst deadlineKeywords = [\"deadline\", \"due date\", \"when to apply\", \"last date\", \"winter 2027\", \"summer 2027\", \"remind me\", \"alert\"];\n\nconst isDeadlineQuery = deadlineKeywords.some(keyword => \n  message.toLowerCase().includes(keyword)\n);\n\nreturn [{\n  json: {\n    ...$json,\n    isDeadlineQuery: isDeadlineQuery\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        -224
+      ],
+      "id": "faaba146-4f50-4991-9990-764af181cc57",
+      "name": "Deadline Detector"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "1160a0af-41a6-4fae-ab3b-f057f0c71a98",
+              "leftValue": "={{ $json.has_deadline }} ",
+              "rightValue": "True",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        832,
+        -208
+      ],
+      "id": "36457ccb-b1a3-4ddb-a99d-5e413db42f36",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "sendTo": "zc19398@gmail.com",
+        "subject": "=⏰ EduRoute Alert — {{ $json.university }} Deadline Reminder",
+        "message": "=<!DOCTYPE html> <html> <body style=\"font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 0;\">  <!-- Header --> <div style=\"background: linear-gradient(135deg, #1F4E79, #2E75B6); padding: 30px 20px; border-radius: 12px 12px 0 0; text-align: center;\">   <h1 style=\"color: white; margin: 0; font-size: 24px;\">🎓 EduRoute</h1>   <p style=\"color: #BDD7EE; margin: 5px 0 0 0; font-size: 14px;\">Your German University Admission Assistant</p> </div>  <!-- Alert Banner --> <div style=\"background: #FF6B6B; padding: 15px; text-align: center;\">   <h2 style=\"color: white; margin: 0; font-size: 18px;\">⏰ Deadline Alert!</h2> </div>  <!-- Main Content --> <div style=\"background: #f9f9f9; padding: 25px; border-radius: 0 0 12px 12px;\">    <!-- University Card -->   <div style=\"background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #1F4E79; margin-bottom: 20px;\">     <h3 style=\"color: #1F4E79; margin: 0 0 15px 0;\">📋 Deadline Details</h3>     <p style=\"margin: 8px 0;\"><strong>🎓 University:</strong> {{ $json.university }}</p>     <p style=\"margin: 8px 0;\"><strong>📅 Deadline:</strong> {{ $json.deadline }}</p>     <p style=\"margin: 8px 0;\"><strong>⏳ Days Left:</strong> {{ $json.days_left !== null ? $json.days_left + ' days' : 'Check deadline' }}</p>   </div>    <!-- What You Asked -->   <div style=\"background: #EBF3FB; padding: 15px; border-radius: 8px; margin-bottom: 20px;\">     <p style=\"margin: 0; font-size: 13px; color: #555;\"><strong>💬 Your Query:</strong> {{ $json.user_message }}</p>   </div>    <!-- Checklist -->   <div style=\"background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;\">     <h3 style=\"color: #1F4E79; margin: 0 0 15px 0;\">✅ Application Checklist</h3>     <table style=\"width: 100%; border-collapse: collapse;\">       <tr><td style=\"padding: 6px 0;\">☐ Motivation Letter</td></tr>       <tr><td style=\"padding: 6px 0;\">☐ Updated CV</td></tr>       <tr><td style=\"padding: 6px 0;\">☐ HEC Attested Transcripts</td></tr>       <tr><td style=\"padding: 6px 0;\">☐ IELTS Certificate</td></tr>       <tr><td style=\"padding: 6px 0;\">☐ Passport Copy</td></tr>       <tr><td style=\"padding: 6px 0;\">☐ Reference Letters</td></tr>       <tr><td style=\"padding: 6px 0;\">☐ Blocked Account (€11,208)</td></tr>     </table>   </div>    <!-- Tips -->   <div style=\"background: #E2EFDA; padding: 15px; border-radius: 8px; margin-bottom: 20px;\">     <h4 style=\"color: #375623; margin: 0 0 10px 0;\">💡 Important Reminders</h4>     <ul style=\"margin: 0; padding-left: 20px; color: #375623;\">       <li>Submit at least 5 days before deadline</li>       <li>HEC attestation takes 2-3 weeks — do it NOW</li>       <li>Book embassy appointment early (2-3 months wait)</li>       <li>APS certificate NOT required for Pakistani students</li>     </ul>   </div>    <!-- EduRoute Response -->   <div style=\"background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;\">     <h3 style=\"color: #1F4E79; margin: 0 0 15px 0;\">🤖 EduRoute Full Response</h3>     <p style=\"color: #444; line-height: 1.6; white-space: pre-wrap; font-size: 13px;\">{{ $json.full_response }}</p>   </div>    <!-- Footer -->   <div style=\"text-align: center; padding-top: 15px; border-top: 1px solid #ddd;\">     <p style=\"color: #999; font-size: 12px; margin: 0;\">       Sent by EduRoute Bot • Built by Zain<br>       You asked about German university admissions     </p>   </div>  </div> </body> </html>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1136,
+        -208
+      ],
+      "id": "cde0bece-d811-4a9f-aca6-e91019cd8c4e",
+      "name": "Send a message",
+      "webhookId": "cde0ee82-e490-4a2b-ad4f-6bfd12a77f7a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Ru988T57IaIX7zUR",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1264,
+        -80
+      ],
+      "id": "8a662c36-1ddd-42d7-a44d-045b5becd9d7",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "jsCode": "const message = $json.chatInput || $json.output || \"\";\nconst universityKeywords = [\"university\", \"admission\", \"apply\", \"program\", \"course\", \"degree\", \"bachelor\", \"master\", \"cgpa\", \"ielts\", \"deadline\"];\n\nconst isUniversityQuery = universityKeywords.some(keyword => \n  message.toLowerCase().includes(keyword)\n);\n\nreturn [{\n  json: {\n    ...$json,\n    isUniversityQuery: isUniversityQuery\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        624,
+        -464
+      ],
+      "id": "939d3098-4304-4e20-b155-f98b5241ccc6",
+      "name": "detect_university_query"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "1160a0af-41a6-4fae-ab3b-f057f0c71a98",
+              "leftValue": "={ $json.is_university_query }}",
+              "rightValue": "True",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        864,
+        -496
+      ],
+      "id": "96f60452-023a-46a3-abc4-fb9d8b61c62e",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "sendTo": "zc19398@gmail.com",
+        "subject": "=🎓 EduRoute — {{ $json.university }} Summary",
+        "message": "=<!DOCTYPE html>\n<html>\n<body style=\"font-family: 'Segoe UI', Arial, sans-serif; max-width: 650px; margin: 0 auto; background: #f0f4f8; padding: 20px;\">\n\n<!-- Header -->\n<div style=\"background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%); padding: 35px 30px; border-radius: 16px 16px 0 0; text-align: center;\">\n  <h1 style=\"color: white; margin: 0; font-size: 28px; font-weight: 700;\">🎓 EduRoute</h1>\n  <p style=\"color: #BDD7EE; margin: 8px 0 0 0; font-size: 15px; letter-spacing: 1px;\">GERMAN UNIVERSITY ADMISSION ADVISOR</p>\n</div>\n\n<!-- University Name Banner -->\n<div style=\"background: #2E75B6; padding: 20px 30px; text-align: center;\">\n  <h2 style=\"color: white; margin: 0; font-size: 20px;\">{{ $json.university }}</h2>\n  <p style=\"color: #BDD7EE; margin: 5px 0 0 0; font-size: 13px;\">Official University Summary Report</p>\n</div>\n\n<!-- Main Content -->\n<div style=\"background: white; padding: 30px; border-radius: 0 0 16px 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\">\n\n  <!-- Quick Stats Grid -->\n  <h3 style=\"color: #1F4E79; margin: 0 0 20px 0; font-size: 16px; border-bottom: 2px solid #E2EFDA; padding-bottom: 10px;\">📊 Quick Overview</h3>\n  \n  <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 25px;\">\n    <tr>\n      <td style=\"width: 50%; padding: 10px; vertical-align: top;\">\n        <div style=\"background: #EBF3FB; padding: 15px; border-radius: 10px; text-align: center;\">\n          <div style=\"font-size: 22px; margin-bottom: 5px;\">📊</div>\n          <div style=\"font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;\">QS Rank</div>\n          <div style=\"font-size: 18px; font-weight: 700; color: #1F4E79;\">{{ $json.details.rank }}</div>\n        </div>\n      </td>\n      <td style=\"width: 50%; padding: 10px; vertical-align: top;\">\n        <div style=\"background: #E2EFDA; padding: 15px; border-radius: 10px; text-align: center;\">\n          <div style=\"font-size: 22px; margin-bottom: 5px;\">💰</div>\n          <div style=\"font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;\">Tuition</div>\n          <div style=\"font-size: 18px; font-weight: 700; color: #375623;\">FREE ✅</div>\n        </div>\n      </td>\n    </tr>\n    <tr>\n      <td style=\"padding: 10px; vertical-align: top;\">\n        <div style=\"background: #FFF2CC; padding: 15px; border-radius: 10px; text-align: center;\">\n          <div style=\"font-size: 22px; margin-bottom: 5px;\">📋</div>\n          <div style=\"font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;\">Min CGPA</div>\n          <div style=\"font-size: 18px; font-weight: 700; color: #7F6000;\">{{ $json.details.min_cgpa }}</div>\n        </div>\n      </td>\n      <td style=\"padding: 10px; vertical-align: top;\">\n        <div style=\"background: #FCE4D6; padding: 15px; border-radius: 10px; text-align: center;\">\n          <div style=\"font-size: 22px; margin-bottom: 5px;\">🌍</div>\n          <div style=\"font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;\">Min IELTS</div>\n          <div style=\"font-size: 18px; font-weight: 700; color: #833C00;\">{{ $json.details.min_ielts }}</div>\n        </div>\n      </td>\n    </tr>\n  </table>\n\n  <!-- Key Details -->\n  <h3 style=\"color: #1F4E79; margin: 0 0 15px 0; font-size: 16px; border-bottom: 2px solid #E2EFDA; padding-bottom: 10px;\">📋 Important Details</h3>\n  \n  <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 25px;\">\n    <tr style=\"background: #f9f9f9;\">\n      <td style=\"padding: 12px 15px; font-weight: 600; color: #444; width: 40%; border-bottom: 1px solid #eee;\">📅 Winter 2027 Deadline</td>\n      <td style=\"padding: 12px 15px; color: #FF6B6B; font-weight: 700; border-bottom: 1px solid #eee;\">{{ $json.details.deadline }}</td>\n    </tr>\n    <tr>\n      <td style=\"padding: 12px 15px; font-weight: 600; color: #444; border-bottom: 1px solid #eee;\">💳 Semester Fee</td>\n      <td style=\"padding: 12px 15px; color: #333; border-bottom: 1px solid #eee;\">{{ $json.details.semester_fee }}</td>\n    </tr>\n    <tr style=\"background: #f9f9f9;\">\n      <td style=\"padding: 12px 15px; font-weight: 600; color: #444; border-bottom: 1px solid #eee;\">🏢 Application Portal</td>\n      <td style=\"padding: 12px 15px; color: #333; border-bottom: 1px solid #eee;\">{{ $json.details.portal }}</td>\n    </tr>\n    <tr>\n      <td style=\"padding: 12px 15px; font-weight: 600; color: #444; border-bottom: 1px solid #eee;\">🎯 Difficulty</td>\n      <td style=\"padding: 12px 15px; color: #333; border-bottom: 1px solid #eee;\">{{ $json.details.difficulty }}</td>\n    </tr>\n    <tr style=\"background: #f9f9f9;\">\n      <td style=\"padding: 12px 15px; font-weight: 600; color: #444;\">🎓 Scholarship</td>\n      <td style=\"padding: 12px 15px; color: #333;\">{{ $json.details.scholarship }}</td>\n    </tr>\n  </table>\n\n  <!-- Pakistani Students Section -->\n  <div style=\"background: linear-gradient(135deg, #1F4E79, #2E75B6); padding: 20px; border-radius: 12px; margin-bottom: 25px;\">\n    <h3 style=\"color: white; margin: 0 0 12px 0; font-size: 15px;\">🇵🇰 Pakistani Students — Important</h3>\n    <ul style=\"color: #BDD7EE; margin: 0; padding-left: 20px; line-height: 1.8;\">\n      <li>APS Certificate <strong style=\"color: #90EE90;\">NOT required</strong></li>\n      <li>HEC Attestation <strong style=\"color: #FFD700;\">IS required</strong></li>\n      <li>Blocked Account needed: <strong style=\"color: white;\">€11,208</strong></li>\n      <li>Book embassy appointment 2-3 months early</li>\n    </ul>\n  </div>\n\n  <!-- Pro Tip -->\n  <div style=\"background: #E2EFDA; padding: 18px; border-radius: 10px; margin-bottom: 25px; border-left: 4px solid #375623;\">\n    <h4 style=\"color: #375623; margin: 0 0 8px 0;\">💡 Pro Tip</h4>\n    <p style=\"color: #444; margin: 0; line-height: 1.6;\">{{ $json.details.pro_tip || 'Apply at least 2 weeks before the deadline to avoid last-minute technical issues with the application portal.' }}</p>\n  </div>\n\n  <!-- Full EduRoute Response -->\n  <div style=\"background: #f9f9f9; padding: 20px; border-radius: 10px; margin-bottom: 25px;\">\n    <h3 style=\"color: #1F4E79; margin: 0 0 15px 0; font-size: 15px;\">🤖 Full EduRoute Analysis</h3>\n    <p style=\"color: #444; line-height: 1.8; white-space: pre-wrap; font-size: 13px; margin: 0;\">{{ $json.full_response }}</p>\n  </div>\n\n  <!-- Action Buttons -->\n  <div style=\"text-align: center; margin-bottom: 25px;\">\n    <a href=\"https://daad.de\" style=\"display: inline-block; background: #1F4E79; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 5px;\">Visit DAAD 🔗</a>\n    <a href=\"https://uni-assist.de\" style=\"display: inline-block; background: #2E75B6; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 5px;\">uni-assist Portal 🔗</a>\n  </div>\n\n  <!-- Footer -->\n  <div style=\"text-align: center; padding-top: 20px; border-top: 1px solid #eee;\">\n    <p style=\"color: #999; font-size: 12px; margin: 0; line-height: 1.8;\">\n      Generated by <strong>EduRoute</strong> — AI German University Advisor<br>\n      Built by <strong>Zain</strong> | SP23-BAI-032 | COMSATS University Lahore<br>\n      <span style=\"color: #BDD7EE;\">Helping Pakistani students reach Germany 🇩🇪</span>\n    </p>\n  </div>\n\n</div>\n</body>\n</html>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1040,
+        -592
+      ],
+      "id": "9894f602-e918-4ef0-988d-15137b572ac5",
+      "name": "Send a message1",
+      "webhookId": "cde0ee82-e490-4a2b-ad4f-6bfd12a77f7a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Ru988T57IaIX7zUR",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1056,
+        -416
+      ],
+      "id": "df608d30-0051-4566-a93d-2e1a4bb6b845",
+      "name": "No Operation, do nothing1"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "03a326e7-8cf0-4202-ae0e-176c0835dcbc",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        -288
+      ],
+      "id": "1c39cee6-57ac-4fa5-8baf-3633e99ddc88",
+      "name": "Webhook",
+      "webhookId": "03a326e7-8cf0-4202-ae0e-176c0835dcbc"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        656,
+        -608
+      ],
+      "id": "402c43c5-5e5a-44cc-8e06-3f66c3161192",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $workflow.id }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        96,
+        128
+      ],
+      "id": "8d8d5732-2aad-4587-8a80-984045e78a82",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "calculate_german_grade": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cost_calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "live_web_search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "university_database": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "scholarship_finder": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "visa_timeline": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "university_comparator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "eligibility_checker": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Deadline Detector",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "detect_university_query",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deadline Detector": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "detect_university_query": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "150de2a0-e1eb-4505-8683-dd8fa4b6aec9",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bd08e5586519b67b433c95225ec16c12321360943c1c82d8054a7fdf3e86ba0c"
+  },
+  "nodeGroups": [],
+  "id": "KqsRAd2a4ASFL0gE",
+  "tags": []
+}
